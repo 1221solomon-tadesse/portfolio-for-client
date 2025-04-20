@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react"
+import { ArrowDown, Download, Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function Hero() {
@@ -73,13 +73,8 @@ export default function Hero() {
             <Linkedin size={24} />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a
-            href="#"
-            className="text-gray-600 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-500 transition-colors"
-          >
-            <Github size={24} />
-            <span className="sr-only">GitHub</span>
-          </a>
+         
+           
           <a
             href="mailto:alemu.tadesse1221@gmail.com"
             className="text-gray-600 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-500 transition-colors"
