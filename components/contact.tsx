@@ -68,28 +68,44 @@ export default function Contact() {
           >
             <Card className="h-full">
               <CardContent className="p-6 flex flex-col h-full">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Contact Information</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                  Contact Information
+                </h3>
                 <div className="space-y-6 flex-grow">
                   <div className="flex items-start">
                     <Phone className="h-5 w-5 text-emerald-600 mr-3 mt-0.5" />
                     <div>
-                      <p className="font-medium text-gray-900 dark:text-white">Phone</p>
-                      <p className="text-gray-700 dark:text-gray-300">+251 929 322 764</p>
-                      <p className="text-gray-700 dark:text-gray-300">+251 982 761 060</p>
+                      <p className="font-medium text-gray-900 dark:text-white">
+                        Phone
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        +251 929 322 764
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        +251 982 761 060
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Mail className="h-5 w-5 text-emerald-600 mr-3 mt-0.5" />
                     <div>
-                      <p className="font-medium text-gray-900 dark:text-white">Email</p>
-                      <p className="text-gray-700 dark:text-gray-300">asgbabe</p>
+                      <p className="font-medium text-gray-900 dark:text-white">
+                        Email
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        alemu.tadesse1223@gmail.com
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <MapPin className="h-5 w-5 text-emerald-600 mr-3 mt-0.5" />
                     <div>
-                      <p className="font-medium text-gray-900 dark:text-white">Address</p>
-                      <p className="text-gray-700 dark:text-gray-300">Addis Ababa, Ethiopia</p>
+                      <p className="font-medium text-gray-900 dark:text-white">
+                        Address
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300">
+                        Addis Ababa, Ethiopia
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -105,11 +121,16 @@ export default function Contact() {
           >
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">Send Me a Message</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                  Send Me a Message
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <label
+                        htmlFor="name"
+                        className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                      >
                         Your Name
                       </label>
                       <Input
@@ -122,7 +143,10 @@ export default function Contact() {
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <label
+                        htmlFor="email"
+                        className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                      >
                         Your Email
                       </label>
                       <Input
@@ -137,7 +161,10 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <label
+                      htmlFor="subject"
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >
                       Subject
                     </label>
                     <Input
@@ -150,7 +177,10 @@ export default function Contact() {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label htmlFor="message" className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                    <label
+                      htmlFor="message"
+                      className="text-sm font-medium text-gray-700 dark:text-gray-300"
+                    >
                       Message
                     </label>
                     <Textarea
@@ -163,7 +193,10 @@ export default function Contact() {
                       required
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700">
+                  <Button
+                    type="submit"
+                    className="w-full bg-emerald-600 hover:bg-emerald-700"
+                  >
                     Send Message
                   </Button>
                 </form>
@@ -173,5 +206,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
