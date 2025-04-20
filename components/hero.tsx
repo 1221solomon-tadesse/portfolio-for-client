@@ -1,16 +1,39 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowDown, Download, Linkedin, Mail } from "lucide-react"
-import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowDown, Download, Linkedin, Mail } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+    setIsVisible(true);
+  }, []);
+
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    // Create a link element
+    const link = document.createElement("a");
+
+    // Set the href to the CV file path
+    // Note: You should replace this with the actual path to your CV file
+    link.href = "/MY CV.pdf";
+
+    // Set download attribute with filename
+    link.download = "Alemu_Tadesse_Zeru_CV.pdf";
+
+    // Append to body
+    document.body.appendChild(link);
+
+    // Trigger click
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+  };
 
   return (
     <section
@@ -26,10 +49,13 @@ export default function Hero() {
           className="mb-8"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            Hi, I'm <span className="text-emerald-600 dark:text-emerald-500">Alemu Tadesse Zeru</span>
+            Hi, I'm{" "}
+            <span className="text-emerald-600 dark:text-emerald-500">
+              Alemu Tadesse Zeru
+            </span>
           </h1>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-gray-700 dark:text-gray-300">
-            Manufacturing Engineer
+           MSC Manufacturing Engineer
           </h2>
         </motion.div>
 
@@ -39,8 +65,9 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10"
         >
-          A motivated, adaptable and responsible manufacturing engineering graduate with expertise in mechanical design,
-          material science, and production optimization.
+          A motivated, adaptable and responsible manufacturing engineering
+          graduate with expertise in mechanical design, material science, and
+          production optimization.
         </motion.p>
 
         <motion.div
@@ -49,12 +76,15 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          <Button className="bg-emerald-600 hover:bg-emerald-700">
-            <Mail className="mr-2 h-4 w-4" /> Contact Me
-          </Button>
+          <Link href="#contact">
+            <Button className="bg-emerald-600 hover:bg-emerald-700">
+              <Mail className="mr-2 h-4 w-4" /> Contact Me
+            </Button>
+          </Link>
           <Button
             variant="outline"
             className="border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-gray-800"
+            onClick={handleDownloadCV}
           >
             <Download className="mr-2 h-4 w-4" /> Download CV
           </Button>
@@ -67,16 +97,7 @@ export default function Hero() {
           className="flex justify-center space-x-6 mb-16"
         >
           <a
-            href="#"
-            className="text-gray-600 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-500 transition-colors"
-          >
-            <Linkedin size={24} />
-            <span className="sr-only">LinkedIn</span>
-          </a>
-         
-           
-          <a
-            href="mailto:alemu.tadesse1221@gmail.com"
+            href="mailto:alemu.tadesse1223@gmail.com"
             className="text-gray-600 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-emerald-500 transition-colors"
           >
             <Mail size={24} />
@@ -96,5 +117,5 @@ export default function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

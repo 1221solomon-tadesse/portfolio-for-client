@@ -12,9 +12,9 @@ export default function Skills() {
   })
 
   const technicalSkills = [
-    { name: "AutoCAD", level: 90 },
+    { name: "AutoCAD", level: 75 },
     { name: "Solid Works", level: 85 },
-    { name: "Creo", level: 80 },
+    { name: "Creo", level: 70 },
     { name: "Engineering Drawing", level: 95 },
     { name: "Material Science", level: 85 },
   ]
