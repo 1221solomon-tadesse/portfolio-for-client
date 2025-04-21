@@ -8,9 +8,9 @@ import Navbar from "@/components/navbar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Alemu Tadesse Zeru | Manufacturing Engineer",
+  title: "Alemu Tadesse Zeru |MSC Manufacturing Engineer",
   description: "Professional portfolio of Alemu Tadesse Zeru, Manufacturing Engineer",
-    generator: 'v0.dev'
+    
 }
 
 export default function RootLayout({
